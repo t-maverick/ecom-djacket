@@ -1,0 +1,14 @@
+install and setup django
+install and setup Vue
+include Font Awesome
+setup the base template
+create django app and models for products
+creare serializer and views for products
+create simple front page
+View a product
+  -create viewset in djanngo
+  -create view page for showing product
+  -add link to showing product
+sette opp Vuex/State
+make it possible to add to cart
+  -add functionality to Vuex
