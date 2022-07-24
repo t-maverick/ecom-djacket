@@ -12,3 +12,5 @@ View a product
 sette opp Vuex/State
 make it possible to add to cart
   -add functionality to Vuex
+  -initialize the store in app.vue
+  
