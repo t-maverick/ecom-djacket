@@ -13,4 +13,15 @@ sette opp Vuex/State
 make it possible to add to cart
   -add functionality to Vuex
   -initialize the store in app.vue
-  
+  -add button to product page
+  -show a bulma-toast message
+Implement a loading bar
+Set document title (all pages)
+Make possible to view category
+  -convert the product to a component
+Add search functionality
+View cart
+  -a cart item should be a component
+Change contets of a cart
+  -Increment/decrement content
+  -Remove from cart
