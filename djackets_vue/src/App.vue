@@ -20,6 +20,15 @@
               <div class="control">
                 <input type="text" class="input" placeholder="What are you looking for?" name="query">
               </div>
+
+              <div class="control">
+                <button class="button is-success">
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </button>
+              </div>
+
             </div>
           </form>
         </div>
@@ -32,7 +41,7 @@
             <div class="buttons">
               <router-link to="/login" class="button is-light">Log in</router-link>
 
-              <router-link to="/card" class="button is-succes">
+              <router-link to="/cart" class="button is-succes">
                 <span class="icon"><i class="fas fa-shopping-cart"></i></span>
                 <span>Cart ({{cartTotalLength}})</span>
               </router-link>

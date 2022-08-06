@@ -41,10 +41,10 @@ class CategoryDetail(APIView):
 @api_view(['POST'])
 def search(request):
     query = request.data.get('query', '')
-    
+
     if query:
-        products = Product.objects.filter(Q(name__icontains=query) | Q(descriptions__icontains=query))
+        products = Product.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
     else:
-        return Response({"prodcts": []})
+        return Response({"products": []})
