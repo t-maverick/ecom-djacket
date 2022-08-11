@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+# from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,6 +28,8 @@ SECRET_KEY = 'django-insecure-q83ve%b_+5!d896@x+dfll0vdt6p!ch8ql#o7z3(l=rrvu715w
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+STRIPE_SECRET_KEY = 'sk_test_51LV3s0EXshT2mWLwjmBVDAryNezRHv7Szvlrzb8HrWy7jir2Nz3If5h0Js1BLnoyly1NUUhvLu2uol3AsrCZJ1Sc00GkVmAux3'
 
 
 # Application definition
@@ -44,7 +48,8 @@ INSTALLED_APPS = [
     'djoser',
     
     # django apps
-    'product'
+    'product',
+    'order',
 ]
 
 CORS_ALLOWED_ORIGINS = [
