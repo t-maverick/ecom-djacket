@@ -8,6 +8,16 @@
         <div class="column is-12">
             <button @click="logout()" class="button is-danger">Log out</button>
         </div>
+
+        <hr>
+
+        <div class="column is-12">
+            <h2 class="subtitle">My orders</h2>
+            <OrderSummary
+            v-for="order in orders"
+            v-bind:key="order.id"
+            v-bind:order="order" />
+        </div>
     </div>
 </div>
 </template>
