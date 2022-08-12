@@ -25,8 +25,24 @@
 <script>
 import axios from 'axios'
 
+import OrderSummary from '@/components/OrderSummary.vue'
+
 export default {
     name: 'MyAccount',
+    components: {
+        OrderSummary
+    },
+    mounted() {
+        document.title = 'My Account | Djackets'
+
+        this.getMyOrders()
+    },
+    data() {
+        return {
+            orders: []
+
+        }
+    },
     methods: {
         logout() {
             axios.defaults.headers.common['Authorization'] = ""
@@ -38,6 +54,20 @@ export default {
             this.$store.commit('removeToken')
             this.$router.push('/')
 
+        },
+        async getMyOrders() {
+            this.$store.commit('/api/v1/orders', true)
+
+            await axios
+                .get('/api/v1/orders/')
+                .then(response => {
+                    this.orders = response.data
+                })
+                .catch(error => {
+                    console.log(error)
+                })
+            
+            this.$store.commit('/api/v1/orders', false)
         }
     }
 }
